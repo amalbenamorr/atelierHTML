@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title> 
+    <style>
+        .label-inline {
+            display: inline-block;
+            width: 150px; /* Adjust the width as needed */
+            text-align: right; /* Align the labels to the right */
+            margin-right: 10px; /* Add some spacing between the labels and input fields */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"] {
+            display: inline-block;
+            width: 200px; /* Adjust the width as needed */
+        }
+        .btn-inscrire {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <a href="accueil.html">Home</a>
+                <a href="projets.html">Projets et tâches</a>
+                <a href="employes.html">Liste employés</a>
+                <a href="inscription.html">Inscription</a>
+            </ul>
+        </nav>
+        <img src="img1.png" alt="Logo" height="400" width="1300">
+    </header>
+    <!-- Contenu -->
+    <section>
+        <h1>Inscription au Site</h1>
+        <form>   
+        <div>     
+            <label  class="label-inline" for="nom">Nom :</label>
+            <input type="text" id="Nom" name="Nom" required pattern="[A-Za-z]{2,}" title="Veuillez entrer un nom valide(lettres uniquement)">
+           <br><br>
+            <label class="label-inline" for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required pattern="[A-Za-z]{2,}" title="Veuillez entrer un nom valide(lettres uniquement)">
+            <br><br>
+            <label class="label-inline">Email :</label>
+            <input type="email" pattern=".+@gmail.com" title="Saisir une adresse @gmail"required placeholder="contact@gmail.com">
+            <br><br>
+            <label class="label-inline" for="tel">Téléphone :</label>
+            <input type="tel" id="tel" name="Téléphone" required pattern="[0-9]{8}" title="Veuillez entrer un numéro de téléphone valide(8 chiffres)">
+           <br><br>
+           <label class="label-inline" for="date">Date de naissance :</label>
+            <input type="date" id="date" name="Date de naissance" required >
+           <br><br>
+           <label class="label-inline" for="mdp">Mot de passe :</label>
+            <input type="mdp" id="mdp" name="Mot de passe" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Le mot de passe doit contenir au moins 8 caractères, incluant au moins un chiffre, une lettre minuscule et une lettre majuscule">
+           <br><br>
+            <input  type="submit" value="S'inscrire" class="btn-inscrire">
+        </div>
+    </form>
+    <footer>
+        <p>Vous pouvez nous contacter oar email : <a href="mailto:contact@example.com">contact@example.com</a></p>
+        <p>Adresse : Ghazela, Tunis</p>
+    </footer>
+    </body>
+    </html>
